@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="color-scheme" content="light only">
+<meta name="theme-color" content="#FAF8F5">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Camacho Maciá Arquitectos | Estudio de Arquitectura en Madrid — cmA</title>
+<meta name="description" content="Estudio de arquitectura en Madrid desde 1998. Obra singular, cultural y residencial. Jorge Javier Camacho y Mª Eugenia Maciá. Consulta tu proyecto.">
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="https://camachomacia.com/">
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://camachomacia.com/">
+<meta property="og:title" content="Camacho Maciá Arquitectos | Estudio de Arquitectura en Madrid">
+<meta property="og:description" content="Estudio de arquitectura en Madrid desde 1998. Obra singular, cultural y residencial. Jorge Javier Camacho y Mª Eugenia Maciá.">
+<meta property="og:image" content="https://camachomacia.com/assets/img/img-0004.jpg">
+<meta property="og:locale" content="es_ES">
+<meta property="og:site_name" content="cmA Arquitectos">
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Camacho Maciá Arquitectos | Estudio de Arquitectura en Madrid">
+<meta name="twitter:description" content="Estudio de arquitectura en Madrid desde 1998. Obra singular, cultural y residencial.">
+<meta name="twitter:image" content="https://camachomacia.com/assets/img/img-0004.jpg">
+<!-- Favicon — TODO: reemplaza los archivos placeholder con los reales -->
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+<link rel="icon" type="image/png" sizes="192x192" href="assets/img/icon-192.png">
+<link rel="icon" type="image/png" sizes="512x512" href="assets/img/icon-512.png">
+<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&family=Inter:wght@200;300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+<div id="C"></div><div id="CR"></div>
+
+<!-- NAV -->
+<nav id="nav">
+  <a href="#" class="nav-l" onclick="go('home');return false;">cm<em>A</em></a>
+  <button class="nav-toggle" onclick="toggleMenu()" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- MENU OVERLAY -->
+<div id="menu">
+  <ul class="menu-list">
+    <li><a href="#" data-text="Inicio" onclick="go('home');return false;">Inicio</a></li>
+    <li><a href="#" data-text="Proyectos" onclick="go('proj');return false;">Proyectos</a></li>
+    <li><a href="#" data-text="Estudio" onclick="go('estudio');return false;">Estudio</a></li>
+    <li><a href="#" data-text="Premios" onclick="go('premios');return false;">Premios</a></li>
+    <li><a href="#" data-text="Contacto" onclick="go('cont');return false;">Contacto</a></li>
+  </ul>
+  <div class="menu-bottom">
+    <div class="menu-bottom-info">
+      cmA Arquitectos<br>
+      Madrid, España · Est. 1998
+    </div>
+    <a href="mailto:estudio@camacho-macia.com" class="menu-bottom-cta">estudio@camacho-macia.com</a>
+  </div>
+</div>
+
+<!-- HOME -->
+<div id="pg-home" class="pg on">
+  <section id="hero">
+    <div class="hero-img" id="heroImgs"></div>
+    <div class="hero-veil"></div>
+    <div class="hero-title">
+      <h1>Arquitectura<br><em>singular</em></h1>
+      <p class="sub">Estudio de arquitectura en Madrid · Desde 1998</p>
+    </div>
+    <div class="hero-nav" id="heroNav"></div>
+    <div class="hero-content">
+      <div class="hero-meta">
+        Camacho Maciá<br>Arquitectos
+      </div>
+      <div class="hero-meta-r">
+        <div class="pno" id="heroNum">01</div>
+        <div id="heroProj">Pabellón de España</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="h-about">
+    <div class="about-grid">
+      <h2 class="rv">Más de 25 años<br>de arquitectura<br><em>comprometida</em></h2>
+      <div class="text rv d1">
+        <p>cmA Arquitectos es un estudio madrileño con vocación multidisciplinar fundado en 1998 por Jorge Javier Camacho Diez y Mª Eugenia Maciá Torregrosa.</p>
+        <p>Confiamos en una arquitectura creativa defendida desde el rigor técnico y la economía del proyecto, siempre desde una absoluta sensibilidad medioambiental.</p>
+        <button class="cta" onclick="go('estudio')">Conocer el estudio
+          <svg width="18" height="10" viewBox="0 0 18 10" fill="none"><path d="M1 5H17M17 5L13 1M17 5L13 9" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <section id="h-proj">
+    <div class="proj-intro">
+      <div>
+        <div class="s-tag">Obra seleccionada</div>
+        <h2 class="s-h">Proyectos<br><em>destacados</em></h2>
+      </div>
+      <div class="proj-counter">
+        <div>03 / 12</div>
+        <button class="cta" onclick="go('proj')" style="margin-top:24px">Ver todos
+          <svg width="18" height="10" viewBox="0 0 18 10" fill="none"><path d="M1 5H17M17 5L13 1M17 5L13 9" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+      </div>
+    </div>
+
+    <div class="gallery">
+      <a class="g-item full" onclick="go('single',2)">
+        <div class="g-item-img"><img src="assets/img/img-0001.jpg" alt="Auditorio Campo de Criptana"></div>
+        <div class="g-meta">
+          <span class="num">— 01</span>
+          <h3>Nuevo Auditorio<br><em>Campo de Criptana</em></h3>
+          <span class="info">Auditorio · 2025<br>Castilla-La Mancha</span>
+        </div>
+      </a>
+
+      <div class="g-item split-3 right">
+        <div class="g-side-text">
+          <div class="info">— 02 · Pabellón internacional</div>
+          <h3>Pabellón de España<br><em>Expo Milán</em></h3>
+          <p>Un lugar de reunión y descanso. La cubierta horizontal extendida crea un espacio sombreado mediterráneo de gran escala con ventilación natural.</p>
+          <button class="cta" onclick="go('single',0)" style="margin-top:24px">Ver proyecto
+            <svg width="18" height="10" viewBox="0 0 18 10" fill="none"><path d="M1 5H17M17 5L13 1M17 5L13 9" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+        </div>
+        <a onclick="go('single',0)">
+          <div class="g-item-img"><img src="assets/img/img-0002.jpg" alt="Expo Milán"></div>
+        </a>
+      </div>
+
+      <a class="g-item full" onclick="go('single',4)">
+        <div class="g-item-img"><img src="assets/img/img-0003.jpg" alt="Fábrica CLESA"></div>
+        <div class="g-meta">
+          <span class="num">— 03</span>
+          <h3>Rehabilitación<br><em>Fábrica CLESA</em></h3>
+          <span class="info">1.er Premio COAM · 2016<br>Madrid</span>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <footer>
+    <div class="f-grid">
+      <div>
+        <div class="f-logo">cm<em>A</em></div>
+        <p class="f-tagline">Camacho Maciá Arquitectos. Estudio de arquitectura en Madrid desde 1998.</p>
+      </div>
+      <div class="f-col">
+        <h4>Navegación</h4>
+        <a href="#" onclick="go('proj');return false;">Proyectos</a>
+        <a href="#" onclick="go('estudio');return false;">Estudio</a>
+        <a href="#" onclick="go('premios');return false;">Premios</a>
+        <a href="#" onclick="go('cont');return false;">Contacto</a>
+      </div>
+      <div class="f-col">
+        <h4>Estudio</h4>
+        <a href="tel:+34910063053">+34 910 063 053</a>
+        <a href="mailto:estudio@camacho-macia.com">estudio@camacho-macia.com</a>
+        <a>Madrid, España</a>
+      </div>
+      <div class="f-col">
+        <h4>Síguenos</h4>
+        <a>Instagram</a>
+        <a>LinkedIn</a>
+        <a href="https://camachomacia.com" target="_blank">camachomacia.com</a>
+      </div>
+    </div>
+    <div class="f-bottom">
+      <span>© 2026 cmA Arquitectos · Todos los derechos reservados</span>
+      <span>Madrid · España</span>
+    </div>
+  </footer>
+</div>
+
+<!-- PROJECTS PAGE -->
+<div id="pg-proj" class="pg">
+  <div class="pj-page-hdr">
+    <h1>Proyectos <em>realizados</em></h1>
+    <div class="pj-count" id="pjCount">28 proyectos</div>
+  </div>
+  <div class="pj-cat-strip" id="pjCats"></div>
+  <div class="pj-vert-list" id="pjVertList"></div>
+  <footer>
+    <div class="f-grid">
+      <div><div class="f-logo">cm<em>A</em></div><p class="f-tagline">Camacho Maciá Arquitectos · Madrid</p></div>
+      <div class="f-col"><h4>Navegación</h4><a href="#" onclick="go('home');return false;">Inicio</a><a href="#" onclick="go('estudio');return false;">Estudio</a><a href="#" onclick="go('cont');return false;">Contacto</a></div>
+      <div class="f-col"><h4>Contacto</h4><a href="tel:+34910063053">+34 910 063 053</a><a href="mailto:estudio@camacho-macia.com">estudio@camacho-macia.com</a></div>
+      <div class="f-col"><h4>Síguenos</h4><a>Instagram</a><a>LinkedIn</a></div>
+    </div>
+    <div class="f-bottom"><span>© 2026 cmA Arquitectos</span><span>Madrid · España</span></div>
+  </footer>
+</div>
+
+<!-- SINGLE -->
+<div id="pg-single" class="pg">
+  <button class="sp-back" onclick="go('proj')">
+    <svg width="18" height="10" viewBox="0 0 18 10" fill="none"><path d="M17 5H1M1 5L5 1M1 5L5 9" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    Todos los proyectos
+  </button>
+  <div class="sp-hero"><img id="spImg" src="" alt=""></div>
+  <div class="sp-content">
+    <div>
+      <div class="sp-cat" id="spCat"></div>
+      <h1 class="sp-title" id="spTitle"></h1>
+    </div>
+    <div class="sp-text">
+      <div id="spText"></div>
+      <div class="sp-data" id="spData"></div>
+    </div>
+  </div>
+  <div class="sp-imgs" id="spImgs"></div>
+  <footer>
+    <div class="f-grid">
+      <div><div class="f-logo">cm<em>A</em></div><p class="f-tagline">Camacho Maciá Arquitectos · Madrid</p></div>
+      <div class="f-col"><h4>Navegación</h4><a href="#" onclick="go('home');return false;">Inicio</a><a href="#" onclick="go('proj');return false;">Proyectos</a><a href="#" onclick="go('cont');return false;">Contacto</a></div>
+      <div class="f-col"><h4>Contacto</h4><a href="tel:+34910063053">+34 910 063 053</a><a href="mailto:estudio@camacho-macia.com">estudio@camacho-macia.com</a></div>
+      <div class="f-col"><h4>Síguenos</h4><a>Instagram</a><a>LinkedIn</a></div>
+    </div>
+    <div class="f-bottom"><span>© 2026 cmA Arquitectos</span><span>Madrid · España</span></div>
+  </footer>
+</div>
+
+<!-- ESTUDIO -->
+<div id="pg-estudio" class="pg">
+  <div class="est-hero">
+    <div class="s-tag rv">— Estudio</div>
+    <h1 class="rv d1">El estudio<br>cm<em>A</em></h1>
+  </div>
+  <div class="est-photo rv" style="overflow:hidden;position:relative;"><img src="assets/img/img-0004.jpg" alt="cmA Arquitectos — sede del estudio en Madrid" loading="lazy" style="width:100%;height:100%;object-fit:cover;object-position:center;display:block;transform:scale(1.15);transition:transform 0.1s linear;" id="estudio-parallax-img"></div>
+  <div class="est-cols">
+    <div class="l">
+      <h2 class="rv">Rigor técnico.<br><em>Ambición formal.</em></h2>
+    </div>
+    <div class="r">
+      <p class="rv d1">cmA Arquitectos es un estudio madrileño con vocación multidisciplinar fundado en 1998 por Jorge Javier Camacho Diez y Mª Eugenia Maciá Torregrosa.</p>
+      <p class="rv d2">Desarrollamos desde 1998 una intensa actividad en el ámbito de la arquitectura con un perfil interdisciplinar, aunando actividad profesional, investigación y docencia en la Universidad San Pablo CEU y la UPM.</p>
+      <p class="rv d3">El foco de actividad es la realización de concursos nacionales e internacionales, obteniendo numerosos reconocimientos en obra singular: auditorios, teatros, conservatorios, museos y vivienda colectiva.</p>
+    </div>
+  </div>
+  <div class="est-team">
+    <div class="team-c">
+      <div class="team-portrait"><img src="assets/img/img-0005.jpg" alt="Jorge Javier Camacho Diez, arquitecto fundador de cmA" loading="lazy" style="width:100%;height:100%;object-fit:cover;object-position:center top;display:block"></div>
+      <div>
+        <h3>Jorge Javier Camacho</h3>
+        <div class="team-role">Arquitecto Director</div>
+        <p>Doctor Arquitecto ETSAM (UPM). Premio Extraordinario de Tesis 2011. Profesor en CES-CEU y USP. Cofundador de cmA en 1998.</p>
+      </div>
+    </div>
+    <div class="team-c">
+      <div class="team-portrait"><img src="assets/img/img-0006.jpg" alt="Mª Eugenia Maciá Torregrosa, arquitecta fundadora de cmA" loading="lazy" style="width:100%;height:100%;object-fit:cover;object-position:center top;display:block"></div>
+      <div>
+        <h3>Mª Eugenia Maciá</h3>
+        <div class="team-role">Arquitecta Directora</div>
+        <p>Doctora Arquitecta ETSAM (UPM). Profesora titular USP. Coordinadora AEN/CTN 140 Eurocódigos de AENOR.</p>
+      </div>
+    </div>
+  </div>
+  <div class="est-expos">
+    <div class="s-tag">— Trayectoria</div>
+    <h2 class="s-h" style="margin-bottom:48px">Exposiciones<br><em>internacionales</em></h2>
+    <div id="expoList"></div>
+  </div>
+  <footer>
+    <div class="f-grid">
+      <div><div class="f-logo">cm<em>A</em></div><p class="f-tagline">Camacho Maciá Arquitectos · Madrid</p></div>
+      <div class="f-col"><h4>Navegación</h4><a href="#" onclick="go('home');return false;">Inicio</a><a href="#" onclick="go('proj');return false;">Proyectos</a><a href="#" onclick="go('cont');return false;">Contacto</a></div>
+      <div class="f-col"><h4>Contacto</h4><a href="tel:+34910063053">+34 910 063 053</a><a href="mailto:estudio@camacho-macia.com">estudio@camacho-macia.com</a></div>
+      <div class="f-col"><h4>Síguenos</h4><a>Instagram</a><a>LinkedIn</a></div>
+    </div>
+    <div class="f-bottom"><span>© 2026 cmA Arquitectos</span><span>Madrid · España</span></div>
+  </footer>
+</div>
+
+<!-- PREMIOS -->
+<div id="pg-premios" class="pg">
+  <div class="pm-hero">
+    <div class="s-tag rv">— Reconocimientos</div>
+    <h1 class="rv d1">Premios<br>y <em>premios</em></h1>
+  </div>
+  <div class="pm-list" id="pmList"></div>
+  <footer>
+    <div class="f-grid">
+      <div><div class="f-logo">cm<em>A</em></div><p class="f-tagline">Camacho Maciá Arquitectos · Madrid</p></div>
+      <div class="f-col"><h4>Navegación</h4><a href="#" onclick="go('home');return false;">Inicio</a><a href="#" onclick="go('proj');return false;">Proyectos</a><a href="#" onclick="go('cont');return false;">Contacto</a></div>
+      <div class="f-col"><h4>Contacto</h4><a href="tel:+34910063053">+34 910 063 053</a><a href="mailto:estudio@camacho-macia.com">estudio@camacho-macia.com</a></div>
+      <div class="f-col"><h4>Síguenos</h4><a>Instagram</a><a>LinkedIn</a></div>
+    </div>
+    <div class="f-bottom"><span>© 2026 cmA Arquitectos</span><span>Madrid · España</span></div>
+  </footer>
+</div>
+
+<!-- CONTACTO -->
+<div id="pg-cont" class="pg">
+  <div class="ct-hero">
+    <div class="s-tag rv">— Hablemos</div>
+    <h1 class="rv d1">Empezar<br>un <em>proyecto</em></h1>
+  </div>
+  <div class="ct-body">
+    <div class="ct-info rv">
+      <div class="ct-row"><span class="ct-lbl">Estudio</span><span class="ct-val">Madrid, España</span></div>
+      <div class="ct-row"><span class="ct-lbl">Teléfono</span><span class="ct-val"><a href="tel:+34910063053">+34 910 063 053</a></span></div>
+      <div class="ct-row"><span class="ct-lbl">Email</span><span class="ct-val"><a href="mailto:estudio@camacho-macia.com">estudio@camacho-macia.com</a></span></div>
+      <div class="ct-row"><span class="ct-lbl">Web</span><span class="ct-val"><a href="https://camachomacia.com" target="_blank">camachomacia.com</a></span></div>
+      <div class="ct-row"><span class="ct-lbl">Horario</span><span class="ct-val">Lun–Vie · 9:00–18:00</span></div>
+    </div>
+    <form class="ct-form rv d1" id="ct-form" action="https://formspree.io/f/xaqvgkza" method="POST">
+      <input type="hidden" name="_subject" value="Nueva consulta desde la web">
+      <div class="ff"><label>Nombre completo</label><input type="text" name="nombre" placeholder=""></div>
+      <div class="ff"><label>Email</label><input type="email" name="email" placeholder=""></div>
+      <div class="ff"><label>Teléfono</label><input type="tel" name="telefono" placeholder=""></div>
+      <div class="ff"><label>Tipo de proyecto</label>
+        <select name="tipo_proyecto">
+          <option value="">Selecciona</option>
+          <option>Residencial unifamiliar</option><option>Vivienda colectiva</option>
+          <option>Equipamiento cultural</option><option>Concurso</option>
+          <option>Rehabilitación</option><option>Consulta general</option>
+        </select>
+      </div>
+      <div class="ff"><label>Mensaje</label><textarea name="mensaje" placeholder=""></textarea></div>
+      <button class="ct-sub" type="submit">Enviar consulta
+        <svg width="18" height="10" viewBox="0 0 18 10" fill="none"><path d="M1 5H17M17 5L13 1M17 5L13 9" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+    </form>
+  </div>
+  <footer>
+    <div class="f-grid">
+      <div><div class="f-logo">cm<em>A</em></div><p class="f-tagline">Camacho Maciá Arquitectos · Madrid</p></div>
+      <div class="f-col"><h4>Navegación</h4><a href="#" onclick="go('home');return false;">Inicio</a><a href="#" onclick="go('proj');return false;">Proyectos</a><a href="#" onclick="go('estudio');return false;">Estudio</a></div>
+      <div class="f-col"><h4>Contacto</h4><a href="tel:+34910063053">+34 910 063 053</a><a href="mailto:estudio@camacho-macia.com">estudio@camacho-macia.com</a></div>
+      <div class="f-col"><h4>Síguenos</h4><a>Instagram</a><a>LinkedIn</a></div>
+    </div>
+    <div class="f-bottom"><span>© 2026 cmA Arquitectos</span><span>Madrid · España</span></div>
+  </footer>
+</div>
+
+
+<script src="assets/js/main.js"></script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ArchitectureFirm",
+  "name": "Camacho Maciá Arquitectos",
+  "alternateName": "cmA",
+  "url": "https://camachomacia.com",
+  "image": "https://camachomacia.com/assets/img/img-0004.jpg",
+  "telephone": "+34910063053",
+  "email": "estudio@camacho-macia.com",
+  "foundingDate": "1998",
+  "description": "Estudio de arquitectura en Madrid. Obra singular, cultural y residencial desde 1998.",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "TODO: calle y número",
+    "addressLocality": "Madrid",
+    "addressRegion": "Madrid",
+    "postalCode": "TODO: código postal",
+    "addressCountry": "ES"
+  },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+      "opens": "09:00",
+      "closes": "18:00"
+    }
+  ],
+  "sameAs": [
+    "TODO: URL Instagram",
+    "TODO: URL LinkedIn"
+  ]
+}
+</script>
+</body>
+</html>
