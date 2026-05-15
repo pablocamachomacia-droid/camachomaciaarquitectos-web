@@ -1,3 +1,4 @@
 *.backup.html
 *.backup.seo.html
 _extract_*.js
+node_modules/
