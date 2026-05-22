@@ -152,13 +152,6 @@ const EXPOS = [
 const FILTERS = ['Todos','auditorio','museo','vivienda colectiva','vivienda social','terciario','infraestructura','pabellón exposiciones','casa'];
 const ARR = '<svg width="14" height="10" viewBox="0 0 18 10" fill="none"><path d="M1 5H17M17 5L13 1M17 5L13 9" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>';
 
-/* CURSOR */
-const C=document.getElementById('C'),CR=document.getElementById('CR');
-let mx=0,my=0,rx=0,ry=0;
-document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;C.style.left=mx-2.5+'px';C.style.top=my-2.5+'px';},{passive:true});
-(function a(){rx+=(mx-rx)*.1;ry+=(my-ry)*.1;CR.style.left=rx-15+'px';CR.style.top=ry-15+'px';requestAnimationFrame(a);})();
-document.addEventListener('mouseover',e=>{if(e.target.closest('a,button,.g-item,.pl-item,.pm-row'))document.body.classList.add('h');},{passive:true});
-document.addEventListener('mouseout',e=>{if(e.target.closest('a,button,.g-item,.pl-item,.pm-row'))document.body.classList.remove('h');},{passive:true});
 
 /* NAV scroll */
 function updateNav(){

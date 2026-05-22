@@ -28,15 +28,19 @@
 <link rel="icon" type="image/png" sizes="192x192" href="assets/img/icon-192.png">
 <link rel="icon" type="image/png" sizes="512x512" href="assets/img/icon-512.png">
 <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&family=Inter:wght@200;300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Barlow:wght@300;400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
-<div id="C"></div><div id="CR"></div>
-
 <!-- NAV -->
 <nav id="nav">
-  <a href="#" class="nav-l" onclick="go('home');return false;">cm<em>A</em></a>
+  <a href="#" class="nav-l" onclick="go('home');return false;">cmA</a>
+  <ul class="nav-links">
+    <li><a href="#" onclick="go('proj');return false;">Proyectos</a></li>
+    <li><a href="#" onclick="go('estudio');return false;">Estudio</a></li>
+    <li><a href="#" onclick="go('premios');return false;">Premios</a></li>
+    <li><a href="#" onclick="go('cont');return false;">Contacto</a></li>
+  </ul>
   <button class="nav-toggle" onclick="toggleMenu()" aria-label="Menu">
     <span></span><span></span><span></span>
   </button>
