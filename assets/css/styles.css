@@ -365,7 +365,7 @@ body {
   justify-content: space-between;
   align-items: flex-end;
   max-width: 1400px;
-  margin: 0 auto 0;
+  margin: 0 auto;
   padding: 64px 0 24px;
   border-bottom: 1px solid var(--line);
   flex-wrap: wrap;
@@ -378,114 +378,17 @@ body {
   font-weight: 500;
   text-transform: uppercase;
 }
-
-/* Gallery — tight editorial grid */
-.gallery {
+.home-proj-grid {
   max-width: 1400px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  gap: 2px;
-  margin-top: 2px;
-}
-.g-item {
-  cursor: pointer;
-  display: block;
-  text-decoration: none;
-  color: inherit;
-  position: relative;
-  background: var(--bg2);
-}
-.g-item-img { width: 100%; overflow: hidden; }
-.g-item-img img {
-  width: 100%; height: 100%;
-  object-fit: cover;
-  display: block;
-  transition: transform 1.4s cubic-bezier(.25,.46,.45,.94);
-}
-.g-item:hover .g-item-img img { transform: scale(1.03); }
-
-.g-item.full .g-item-img { aspect-ratio: 21/9; }
-
-.g-meta {
-  padding: 16px 0 28px;
-  background: var(--bg);
+  margin: 20px auto 0;
   display: grid;
-  grid-template-columns: auto 1fr auto;
-  gap: 24px;
-  align-items: baseline;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
 }
-.g-meta .num {
-  font-size: 10px;
-  color: var(--ink3);
-  letter-spacing: 2px;
-  font-weight: 500;
-}
-.g-meta h3 {
-  font-family: var(--cond);
-  font-size: clamp(22px, 2.5vw, 34px);
-  font-weight: 700;
-  text-transform: uppercase;
-  line-height: 1;
-  letter-spacing: -.3px;
-}
-.g-meta h3 em { font-style: italic; font-weight: 400; }
-.g-meta .info {
-  font-size: 10px;
-  color: var(--ink3);
-  letter-spacing: 1.5px;
-  text-transform: uppercase;
-  text-align: right;
-  font-weight: 500;
-  white-space: nowrap;
-}
-
-/* Split item */
-.g-item.split-3 {
-  display: grid;
-  grid-template-columns: 1fr 1.2fr;
-  gap: 2px;
-  background: transparent;
-  cursor: default;
-}
-.g-item.split-3.right { grid-template-columns: 1.2fr 1fr; }
-.g-item.split-3 .g-item-img { aspect-ratio: 5/6; }
-.g-item.split-3 > a {
-  display: block;
-  overflow: hidden;
-  background: var(--bg2);
-  cursor: pointer;
-}
-.g-item.split-3 > a:hover .g-item-img img { transform: scale(1.03); }
-
-.g-side-text {
-  align-self: center;
-  padding: 56px 48px;
-  background: var(--bg2);
-}
-.g-side-text .info {
-  font-size: 10px;
-  color: var(--ink3);
-  letter-spacing: 2.5px;
-  text-transform: uppercase;
-  margin-bottom: 20px;
-  font-weight: 500;
-}
-.g-side-text h3 {
-  font-family: var(--cond);
-  font-size: clamp(28px, 3vw, 44px);
-  font-weight: 700;
-  text-transform: uppercase;
-  line-height: 1;
-  letter-spacing: -.5px;
-  margin-bottom: 20px;
-}
-.g-side-text h3 em { font-style: italic; font-weight: 400; }
-.g-side-text p {
-  font-size: 14px;
-  line-height: 1.8;
-  color: var(--ink2);
-  max-width: 400px;
+@media (max-width: 700px) {
+  .home-proj-grid { grid-template-columns: 1fr; gap: 12px; }
+  #h-proj { padding: 0 24px 80px; }
+  .proj-intro { padding: 48px 0 20px; }
 }
 
 /* ═══ CTA BUTTON ═══ */
@@ -1024,6 +927,53 @@ footer {
   letter-spacing: 1px;
   text-transform: uppercase;
   font-weight: 500;
+}
+
+/* ═══ PROJECTS GRID ═══ */
+.proj-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+  padding: 40px 48px 120px;
+}
+
+.pgi-item { cursor: pointer; }
+
+.pgi-img {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 3/2;
+  background: var(--bg2);
+}
+
+.pgi-main, .pgi-alt {
+  position: absolute;
+  inset: 0;
+  width: 100%; height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: opacity .45s ease;
+}
+.pgi-alt { opacity: 0; }
+.pgi-item:hover .pgi-alt { opacity: 1; }
+.pgi-item:hover .pgi-main { opacity: 0; }
+
+.pgi-name {
+  font-size: 13px;
+  color: var(--ink);
+  padding: 10px 0 0;
+  line-height: 1.35;
+  font-weight: 400;
+}
+
+@media (max-width: 1300px) {
+  .proj-grid { grid-template-columns: repeat(4, 1fr); }
+}
+@media (max-width: 1000px) {
+  .proj-grid { grid-template-columns: repeat(3, 1fr); gap: 14px; padding: 32px 32px 80px; }
+}
+@media (max-width: 700px) {
+  .proj-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; padding: 24px 24px 60px; }
 }
 
 /* ═══ REVEAL ═══ */

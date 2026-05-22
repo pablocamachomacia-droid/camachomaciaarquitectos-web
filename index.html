@@ -112,38 +112,28 @@
       </div>
     </div>
 
-    <div class="gallery">
-      <a class="g-item full" onclick="go('single',2)">
-        <div class="g-item-img"><img src="assets/img/img-0001.jpg" alt="Auditorio Campo de Criptana"></div>
-        <div class="g-meta">
-          <span class="num">— 01</span>
-          <h3>Nuevo Auditorio<br><em>Campo de Criptana</em></h3>
-          <span class="info">Auditorio · 2025<br>Castilla-La Mancha</span>
+    <div class="home-proj-grid" id="homeProjGrid">
+      <div class="pgi-item" onclick="go('single',2)">
+        <div class="pgi-img">
+          <img class="pgi-main" src="assets/img/img-0001.jpg" alt="Nuevo Auditorio Campo de Criptana">
+          <img class="pgi-alt" src="assets/img/proyectos/2/img2.jpg" alt="Nuevo Auditorio Campo de Criptana" loading="lazy">
         </div>
-      </a>
-
-      <div class="g-item split-3 right">
-        <div class="g-side-text">
-          <div class="info">— 02 · Pabellón internacional</div>
-          <h3>Pabellón de España<br><em>Expo Milán</em></h3>
-          <p>Un lugar de reunión y descanso. La cubierta horizontal extendida crea un espacio sombreado mediterráneo de gran escala con ventilación natural.</p>
-          <button class="cta" onclick="go('single',0)" style="margin-top:24px">Ver proyecto
-            <svg width="18" height="10" viewBox="0 0 18 10" fill="none"><path d="M1 5H17M17 5L13 1M17 5L13 9" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </button>
-        </div>
-        <a onclick="go('single',0)">
-          <div class="g-item-img"><img src="assets/img/img-0002.jpg" alt="Expo Milán"></div>
-        </a>
+        <div class="pgi-name">Nuevo Auditorio Campo de Criptana</div>
       </div>
-
-      <a class="g-item full" onclick="go('single',4)">
-        <div class="g-item-img"><img src="assets/img/img-0003.jpg" alt="Fábrica CLESA"></div>
-        <div class="g-meta">
-          <span class="num">— 03</span>
-          <h3>Rehabilitación<br><em>Fábrica CLESA</em></h3>
-          <span class="info">1.er Premio COAM · 2016<br>Madrid</span>
+      <div class="pgi-item" onclick="go('single',0)">
+        <div class="pgi-img">
+          <img class="pgi-main" src="assets/img/img-0002.jpg" alt="Pabellón de España — Expo Milán">
+          <img class="pgi-alt" src="assets/img/proyectos/0/img2.jpg" alt="Pabellón de España — Expo Milán" loading="lazy">
         </div>
-      </a>
+        <div class="pgi-name">Pabellón de España — Expo Milán 2015</div>
+      </div>
+      <div class="pgi-item" onclick="go('single',4)">
+        <div class="pgi-img">
+          <img class="pgi-main" src="assets/img/img-0003.jpg" alt="Fábrica CLESA">
+          <img class="pgi-alt" src="assets/img/proyectos/4/img2.jpg" alt="Fábrica CLESA" loading="lazy">
+        </div>
+        <div class="pgi-name">Rehabilitación Fábrica CLESA</div>
+      </div>
     </div>
   </section>
 
@@ -187,7 +177,7 @@
     <div class="pj-count" id="pjCount">28 proyectos</div>
   </div>
   <div class="pj-cat-strip" id="pjCats"></div>
-  <div class="pj-vert-list" id="pjVertList"></div>
+  <div class="proj-grid" id="pjGrid"></div>
   <footer>
     <div class="f-grid">
       <div><div class="f-logo">cm<em>A</em></div><p class="f-tagline">Camacho Maciá Arquitectos · Madrid</p></div>

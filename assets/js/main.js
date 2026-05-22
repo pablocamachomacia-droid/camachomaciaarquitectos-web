@@ -277,50 +277,34 @@ function renderProj(){
       af=b.dataset.c;
       strip.querySelectorAll('.pj-cat-btn').forEach(x=>x.classList.remove('on'));
       b.classList.add('on');
-      renderVertList();
+      renderProjGrid();
     });
   }
-  renderVertList();
+  renderProjGrid();
 }
 
-function renderVertList(){
-  const list=document.getElementById('pjVertList');
+function renderProjGrid(){
+  const grid=document.getElementById('pjGrid');
   const items=af==='Todos'?PROJS:PROJS.filter(p=>p.cat===af);
   document.getElementById('pjCount').textContent=items.length+' proyecto'+(items.length!==1?'s':'');
 
-  list.innerHTML=items.map((p,i)=>`
-    <div class="pj-vert-item" data-pid="${p.id}">
-      <div class="pj-vi-num">${String(i+1).padStart(2,'0')}</div>
-      <div class="pj-vi-main">
-        <div class="pj-vi-img">${PHOTOS[p.id]?`<img src="${PHOTOS[p.id]}" alt="${p.name}" loading="lazy">`:''}
-        </div>
-        <div class="pj-vi-text">
-          <div class="pj-vi-cat">${CAT_LABELS[p.cat]||p.cat}</div>
-          <div class="pj-vi-name">${p.name}</div>
-        </div>
+  grid.innerHTML=items.map((p,i)=>{
+    const hero=PHOTOS[p.id]||'';
+    const gallery=PROJ_GALLERY[p.id]||[];
+    const alt=gallery[0]||'';
+    const hasAlt=alt&&alt!==hero;
+    return `<div class="pgi-item" data-pid="${p.id}">
+      <div class="pgi-img">
+        ${hero?`<img class="pgi-main" src="${hero}" alt="${p.name}" loading="${i<10?'eager':'lazy'}">`:''}
+        ${hasAlt?`<img class="pgi-alt" src="${alt}" alt="${p.name}" loading="lazy">`:''}
       </div>
-      <div class="pj-vi-right">
-        <span class="pj-vi-loc">${p.loc||''}</span>
-        <span class="pj-vi-year">${p.year}</span>
-        <div class="pj-vi-arrow"></div>
-      </div>
-    </div>`).join('');
+      <div class="pgi-name">${p.name}</div>
+    </div>`;
+  }).join('');
 
-  // Event delegation - no inline onclick needed
-  list.querySelectorAll('.pj-vert-item').forEach(row=>{
-    row.addEventListener('click',()=>go('single',parseInt(row.dataset.pid)));
+  grid.querySelectorAll('.pgi-item').forEach(item=>{
+    item.addEventListener('click',()=>go('single',parseInt(item.dataset.pid)));
   });
-
-  setTimeout(()=>{
-    const rows=list.querySelectorAll('.pj-vert-item');
-    const io=new IntersectionObserver(entries=>{
-      entries.forEach(e=>{
-        if(e.isIntersecting){e.target.classList.add('revealed');io.unobserve(e.target);}
-      });
-    },{threshold:.08,rootMargin:'0px 0px -20px 0px'});
-    rows.forEach(r=>io.observe(r));
-    observe();
-  },60);
 }
 
 /* SINGLE */
