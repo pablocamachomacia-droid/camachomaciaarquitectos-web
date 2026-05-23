@@ -340,7 +340,8 @@ function renderProjGrid(){
   grid.innerHTML=items.map((p,i)=>{
     const hero=PHOTOS[p.id]||'';
     const gallery=PROJ_GALLERY[p.id]||[];
-    const alt=gallery[0]||'';
+    const midIdx=gallery.length>2?Math.floor(gallery.length/2):gallery.length>0?gallery.length-1:-1;
+    const alt=midIdx>=0?gallery[midIdx]:'';
     const hasAlt=alt&&alt!==hero;
     return `<div class="pgi-item" data-pid="${p.id}">
       <div class="pgi-img">
