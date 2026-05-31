@@ -230,7 +230,7 @@ let slide=0,slideTimer;
 function buildHero(){
   const w=document.getElementById('heroImgs');
   const nav=document.getElementById('heroNav');
-  w.innerHTML=HERO_SLIDES.map((s,i)=>`<img src="${s.photo}" alt="${s.name}" class="${i===0?'on':''}">`).join('');
+  w.innerHTML=HERO_SLIDES.map((s,i)=>`<img src="${s.photo}" alt="${s.name}" class="${i===0?'on':''}" width="1500" height="951">`).join('');
   nav.innerHTML=HERO_SLIDES.map((s,i)=>`<button class="${i===0?'on':''}" onclick="setSlide(${i})"></button>`).join('');
 }
 function setSlide(n){
@@ -249,6 +249,72 @@ function setSlide(n){
 buildHero();
 setTimeout(updateNav,100);
 slideTimer=setInterval(()=>setSlide((slide+1)%HERO_SLIDES.length),5500);
+
+/* ─── SEO: meta tags dinámicos ─── */
+const BASE_URL = 'https://camachomaciaarquitectos.com';
+
+const PAGE_META = {
+  home: {
+    title: 'Camacho Maciá Arquitectos | Estudio de arquitectura en Madrid',
+    desc:  'Estudio de arquitectura en Madrid especializado en proyectos residenciales, culturales y de equipamiento público.'
+  },
+  proj: {
+    title: 'Proyectos | Camacho Maciá Arquitectos',
+    desc:  'Descubra los proyectos del estudio de arquitectura Camacho Maciá: vivienda, equipamiento cultural, espacio público y restauración.'
+  },
+  estudio: {
+    title: 'El Estudio | Camacho Maciá Arquitectos',
+    desc:  'Conozca Camacho Maciá Arquitectos, su trayectoria, equipo y filosofía de trabajo.'
+  },
+  premios: {
+    title: 'Premios y reconocimientos | Camacho Maciá Arquitectos',
+    desc:  'Premios y reconocimientos obtenidos por Camacho Maciá Arquitectos a lo largo de su trayectoria.'
+  },
+  cont: {
+    title: 'Contacto | Camacho Maciá Arquitectos',
+    desc:  'Contacte con Camacho Maciá Arquitectos para consultas, proyectos o colaboraciones.'
+  }
+};
+
+function _setMeta(sel, attr, val){
+  let el = document.querySelector(sel);
+  if(el) el.setAttribute(attr, val);
+}
+
+function updateMeta(page, id, url){
+  let title, desc;
+
+  if(page === 'single' && id != null){
+    const p = PROJS[id];
+    title = p.name + ' | Camacho Maciá Arquitectos';
+    // Use first sentence of desc if available, else generic
+    const rawDesc = (p.desc || '').split('\n\n')[0].trim();
+    desc = rawDesc.length > 20
+      ? (rawDesc.length > 155 ? rawDesc.substring(0, 152) + '...' : rawDesc)
+      : 'Proyecto de arquitectura de Camacho Maciá Arquitectos. ' + p.cat + ' · ' + p.year + ' · ' + p.loc;
+  } else {
+    const m = PAGE_META[page] || PAGE_META['home'];
+    title = m.title;
+    desc  = m.desc;
+  }
+
+  const canonical = BASE_URL + url;
+
+  // <title>
+  document.title = title;
+  // <meta name="description">
+  _setMeta('meta[name="description"]', 'content', desc);
+  // Open Graph
+  _setMeta('meta[property="og:title"]',       'content', title);
+  _setMeta('meta[property="og:description"]', 'content', desc);
+  _setMeta('meta[property="og:url"]',         'content', canonical);
+  // Twitter
+  _setMeta('meta[name="twitter:title"]',       'content', title);
+  _setMeta('meta[name="twitter:description"]', 'content', desc);
+  // Canonical
+  let canonEl = document.querySelector('link[rel="canonical"]');
+  if(canonEl) canonEl.setAttribute('href', canonical);
+}
 
 /* ROUTER */
 /* ROUTING */
@@ -304,6 +370,9 @@ function go(page,id){
   const _state={page,id:id??null};
   if(_routeReady){history.pushState(_state,'',_url);}
   else{history.replaceState(_state,'',_url);_routeReady=true;}
+
+  // Update meta tags + canonical (Tasks 1 & 4)
+  updateMeta(page, id??null, _url);
 }
 
 /* PROJECTS */
@@ -363,7 +432,7 @@ function renderSingle(id){
   document.getElementById('spTitle').innerHTML=p.name;
   document.getElementById('spCat').textContent='— '+p.cat+' · '+p.year;
   const img=document.getElementById('spImg');
-  if(PHOTOS[id]){img.src=PHOTOS[id];img.alt=p.name;}
+  if(PHOTOS[id]){img.src=PHOTOS[id];img.alt=p.name;img.width=1500;img.height=951;}
   document.getElementById('spText').innerHTML=p.desc.split('\n\n').map(function(x){return '<p>'+x+'</p>';}).join('');
   document.getElementById('spData').innerHTML=
     Object.entries(p.data).map(function(e){return '<div class="sp-di"><div class="sp-dl">'+e[0]+'</div><div class="sp-dv">'+e[1]+'</div></div>';}).join('');
@@ -376,7 +445,7 @@ function renderSingle(id){
       '<div class="sp-imgs-title">Imágenes del proyecto</div>'+
       '<div class="sp-imgs-grid">'+
       gallerySlice.map(function(src,i){
-        return '<div class="sp-img-item"><div class="sp-img-inner"><img src="'+src+'" alt="'+p.name+'" loading="lazy"></div></div>';
+        return '<div class="sp-img-item"><div class="sp-img-inner"><img src="'+src+'" alt="'+p.name+'" loading="lazy" width="1500" height="951"></div></div>';
       }).join('')+
       '</div>';
   } else {

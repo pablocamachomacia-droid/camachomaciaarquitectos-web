@@ -28,7 +28,8 @@
 <link rel="icon" type="image/png" sizes="192x192" href="assets/img/icon-192.png">
 <link rel="icon" type="image/png" sizes="512x512" href="assets/img/icon-512.png">
 <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
-<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Barlow:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="manifest" href="/manifest.json">
+<link rel="stylesheet" href="assets/css/fonts.css">
 <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
@@ -122,17 +123,17 @@
       </div>
       <div class="pgi-item" onclick="go('single',3)">
         <div class="pgi-img">
-          <img class="pgi-main" src="assets/img/proyectos/3/hero.jpg" alt="Centro ATENPRO — Ministerio de Igualdad">
-          <img class="pgi-alt" src="assets/img/proyectos/3/img2.jpg" alt="Centro ATENPRO — Ministerio de Igualdad" loading="lazy">
+          <img class="pgi-main" src="assets/img/proyectos/3/hero.jpg" alt="Sede ATENPRO — Ministerio de Igualdad">
+          <img class="pgi-alt" src="assets/img/proyectos/3/img2.jpg" alt="Sede ATENPRO — Ministerio de Igualdad" loading="lazy">
         </div>
-        <div class="pgi-name">Centro ATENPRO — Ministerio de Igualdad</div>
+        <div class="pgi-name">Sede ATENPRO — Ministerio de Igualdad</div>
       </div>
-      <div class="pgi-item" onclick="go('single',21)">
+      <div class="pgi-item" onclick="go('single',24)">
         <div class="pgi-img">
-          <img class="pgi-main" src="assets/img/proyectos/21/hero.jpg" alt="324 Viviendas VPP — Leganés">
-          <img class="pgi-alt" src="assets/img/proyectos/21/img2.jpg" alt="324 Viviendas VPP — Leganés" loading="lazy">
+          <img class="pgi-main" src="assets/img/proyectos/24/hero.jpg" alt="108 Viviendas VPP — Leganés">
+          <img class="pgi-alt" src="assets/img/proyectos/24/img2.jpg" alt="108 Viviendas VPP — Leganés" loading="lazy">
         </div>
-        <div class="pgi-name">324 Viviendas VPP — Leganés</div>
+        <div class="pgi-name">108 Viviendas VPP — Leganés</div>
       </div>
     </div>
   </section>
@@ -158,14 +159,13 @@
       </div>
       <div class="f-col">
         <h4>Síguenos</h4>
-        <a>Instagram</a>
-        <a>LinkedIn</a>
+        <a href="https://www.instagram.com/camachomaciaarquitectos/" target="_blank" rel="noopener noreferrer">Instagram</a>
         <a href="https://camachomaciaarquitectos.com" target="_blank">camachomaciaarquitectos.com</a>
       </div>
     </div>
     <div class="f-bottom">
       <span>© 2026 cmA Arquitectos · Todos los derechos reservados</span>
-      <span>Madrid · España</span>
+      <span><a href="/aviso-legal" style="color:inherit;text-decoration:none;">Aviso Legal</a> · <a href="/politica-privacidad" style="color:inherit;text-decoration:none;">Política de Privacidad</a></span>
     </div>
   </footer>
 </div>
@@ -174,7 +174,7 @@
 <div id="pg-proj" class="pg">
   <div class="pj-page-hdr">
     <h1>Proyectos <em>realizados</em></h1>
-    <div class="pj-count" id="pjCount">28 proyectos</div>
+    <div class="pj-count" id="pjCount">35 proyectos</div>
   </div>
   <div class="pj-cat-strip" id="pjCats"></div>
   <div class="proj-grid" id="pjGrid"></div>
@@ -183,9 +183,9 @@
       <div><div class="f-logo">cm<em>A</em></div><p class="f-tagline">Camacho Maciá Arquitectos · Madrid</p></div>
       <div class="f-col"><h4>Navegación</h4><a href="#" onclick="go('home');return false;">Inicio</a><a href="#" onclick="go('estudio');return false;">Estudio</a><a href="#" onclick="go('cont');return false;">Contacto</a></div>
       <div class="f-col"><h4>Contacto</h4><a href="tel:+34910063053">+34 910 063 053</a><a href="mailto:estudio@camacho-macia.com">estudio@camacho-macia.com</a></div>
-      <div class="f-col"><h4>Síguenos</h4><a>Instagram</a><a>LinkedIn</a></div>
+      <div class="f-col"><h4>Síguenos</h4><a href="https://www.instagram.com/camachomaciaarquitectos/" target="_blank" rel="noopener noreferrer">Instagram</a></div>
     </div>
-    <div class="f-bottom"><span>© 2026 cmA Arquitectos</span><span>Madrid · España</span></div>
+    <div class="f-bottom"><span>© 2026 cmA Arquitectos</span><span><a href="/aviso-legal" style="color:inherit;text-decoration:none;">Aviso Legal</a> · <a href="/politica-privacidad" style="color:inherit;text-decoration:none;">Política de Privacidad</a></span></div>
   </footer>
 </div>
 
@@ -212,9 +212,9 @@
       <div><div class="f-logo">cm<em>A</em></div><p class="f-tagline">Camacho Maciá Arquitectos · Madrid</p></div>
       <div class="f-col"><h4>Navegación</h4><a href="#" onclick="go('home');return false;">Inicio</a><a href="#" onclick="go('proj');return false;">Proyectos</a><a href="#" onclick="go('cont');return false;">Contacto</a></div>
       <div class="f-col"><h4>Contacto</h4><a href="tel:+34910063053">+34 910 063 053</a><a href="mailto:estudio@camacho-macia.com">estudio@camacho-macia.com</a></div>
-      <div class="f-col"><h4>Síguenos</h4><a>Instagram</a><a>LinkedIn</a></div>
+      <div class="f-col"><h4>Síguenos</h4><a href="https://www.instagram.com/camachomaciaarquitectos/" target="_blank" rel="noopener noreferrer">Instagram</a></div>
     </div>
-    <div class="f-bottom"><span>© 2026 cmA Arquitectos</span><span>Madrid · España</span></div>
+    <div class="f-bottom"><span>© 2026 cmA Arquitectos</span><span><a href="/aviso-legal" style="color:inherit;text-decoration:none;">Aviso Legal</a> · <a href="/politica-privacidad" style="color:inherit;text-decoration:none;">Política de Privacidad</a></span></div>
   </footer>
 </div>
 
@@ -224,7 +224,7 @@
     <div class="s-tag rv">— Estudio</div>
     <h1 class="rv d1">El estudio<br>cm<em>A</em></h1>
   </div>
-  <div class="est-photo rv" style="overflow:hidden;position:relative;"><img src="assets/img/img-0004.jpg" alt="cmA Arquitectos — sede del estudio en Madrid" loading="lazy" style="width:100%;height:100%;object-fit:cover;object-position:center;display:block;transform:scale(1.15);transition:transform 0.1s linear;" id="estudio-parallax-img"></div>
+  <div class="est-photo rv" style="overflow:hidden;position:relative;"><img src="assets/img/img-0004.jpg" alt="cmA Arquitectos — sede del estudio en Madrid" loading="lazy" width="1500" height="1000" style="width:100%;height:100%;object-fit:cover;object-position:center;display:block;transform:scale(1.15);transition:transform 0.1s linear;" id="estudio-parallax-img"></div>
   <div class="est-cols">
     <div class="l">
       <h2 class="rv">Rigor técnico.<br><em>Ambición formal.</em></h2>
@@ -237,7 +237,7 @@
   </div>
   <div class="est-team">
     <div class="team-c">
-      <div class="team-portrait"><img src="assets/img/img-0005.jpg" alt="Jorge Javier Camacho Diez, arquitecto fundador de cmA" loading="lazy" style="width:100%;height:100%;object-fit:cover;object-position:center top;display:block"></div>
+      <div class="team-portrait"><img src="assets/img/img-0005.jpg" alt="Jorge Javier Camacho Diez, arquitecto fundador de cmA" loading="lazy" width="600" height="600" style="width:100%;height:100%;object-fit:cover;object-position:center top;display:block"></div>
       <div>
         <h3>Jorge Javier Camacho</h3>
         <div class="team-role">Arquitecto Director</div>
@@ -245,7 +245,7 @@
       </div>
     </div>
     <div class="team-c">
-      <div class="team-portrait"><img src="assets/img/img-0006.jpg" alt="Mª Eugenia Maciá Torregrosa, arquitecta fundadora de cmA" loading="lazy" style="width:100%;height:100%;object-fit:cover;object-position:center top;display:block"></div>
+      <div class="team-portrait"><img src="assets/img/img-0006.jpg" alt="Mª Eugenia Maciá Torregrosa, arquitecta fundadora de cmA" loading="lazy" width="600" height="600" style="width:100%;height:100%;object-fit:cover;object-position:center top;display:block"></div>
       <div>
         <h3>Mª Eugenia Maciá</h3>
         <div class="team-role">Arquitecta Directora</div>
@@ -263,9 +263,9 @@
       <div><div class="f-logo">cm<em>A</em></div><p class="f-tagline">Camacho Maciá Arquitectos · Madrid</p></div>
       <div class="f-col"><h4>Navegación</h4><a href="#" onclick="go('home');return false;">Inicio</a><a href="#" onclick="go('proj');return false;">Proyectos</a><a href="#" onclick="go('cont');return false;">Contacto</a></div>
       <div class="f-col"><h4>Contacto</h4><a href="tel:+34910063053">+34 910 063 053</a><a href="mailto:estudio@camacho-macia.com">estudio@camacho-macia.com</a></div>
-      <div class="f-col"><h4>Síguenos</h4><a>Instagram</a><a>LinkedIn</a></div>
+      <div class="f-col"><h4>Síguenos</h4><a href="https://www.instagram.com/camachomaciaarquitectos/" target="_blank" rel="noopener noreferrer">Instagram</a></div>
     </div>
-    <div class="f-bottom"><span>© 2026 cmA Arquitectos</span><span>Madrid · España</span></div>
+    <div class="f-bottom"><span>© 2026 cmA Arquitectos</span><span><a href="/aviso-legal" style="color:inherit;text-decoration:none;">Aviso Legal</a> · <a href="/politica-privacidad" style="color:inherit;text-decoration:none;">Política de Privacidad</a></span></div>
   </footer>
 </div>
 
@@ -273,7 +273,7 @@
 <div id="pg-premios" class="pg">
   <div class="pm-hero">
     <div class="s-tag rv">— Reconocimientos</div>
-    <h1 class="rv d1">Premios<br>y <em>premios</em></h1>
+    <h1 class="rv d1">Premios<br>y <em>reconocimientos</em></h1>
   </div>
   <div class="pm-list" id="pmList"></div>
   <footer>
@@ -281,9 +281,9 @@
       <div><div class="f-logo">cm<em>A</em></div><p class="f-tagline">Camacho Maciá Arquitectos · Madrid</p></div>
       <div class="f-col"><h4>Navegación</h4><a href="#" onclick="go('home');return false;">Inicio</a><a href="#" onclick="go('proj');return false;">Proyectos</a><a href="#" onclick="go('cont');return false;">Contacto</a></div>
       <div class="f-col"><h4>Contacto</h4><a href="tel:+34910063053">+34 910 063 053</a><a href="mailto:estudio@camacho-macia.com">estudio@camacho-macia.com</a></div>
-      <div class="f-col"><h4>Síguenos</h4><a>Instagram</a><a>LinkedIn</a></div>
+      <div class="f-col"><h4>Síguenos</h4><a href="https://www.instagram.com/camachomaciaarquitectos/" target="_blank" rel="noopener noreferrer">Instagram</a></div>
     </div>
-    <div class="f-bottom"><span>© 2026 cmA Arquitectos</span><span>Madrid · España</span></div>
+    <div class="f-bottom"><span>© 2026 cmA Arquitectos</span><span><a href="/aviso-legal" style="color:inherit;text-decoration:none;">Aviso Legal</a> · <a href="/politica-privacidad" style="color:inherit;text-decoration:none;">Política de Privacidad</a></span></div>
   </footer>
 </div>
 
@@ -315,6 +315,13 @@
         </select>
       </div>
       <div class="ff"><label>Mensaje</label><textarea name="mensaje" placeholder=""></textarea></div>
+      <div class="ff-consent">
+        <label class="consent-label">
+          <input type="checkbox" name="_consent" id="consent" required>
+          <span>He leído y acepto la <a href="/politica-privacidad" target="_blank">Política de Privacidad</a></span>
+        </label>
+        <p class="consent-info">Sus datos serán tratados por Pablo Camacho Macía para gestionar su consulta. Más información en nuestra <a href="/politica-privacidad" target="_blank">Política de Privacidad</a>.</p>
+      </div>
       <button class="ct-sub" type="submit">Enviar consulta
         <svg width="18" height="10" viewBox="0 0 18 10" fill="none"><path d="M1 5H17M17 5L13 1M17 5L13 9" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
       </button>
@@ -325,9 +332,9 @@
       <div><div class="f-logo">cm<em>A</em></div><p class="f-tagline">Camacho Maciá Arquitectos · Madrid</p></div>
       <div class="f-col"><h4>Navegación</h4><a href="#" onclick="go('home');return false;">Inicio</a><a href="#" onclick="go('proj');return false;">Proyectos</a><a href="#" onclick="go('estudio');return false;">Estudio</a></div>
       <div class="f-col"><h4>Contacto</h4><a href="tel:+34910063053">+34 910 063 053</a><a href="mailto:estudio@camacho-macia.com">estudio@camacho-macia.com</a></div>
-      <div class="f-col"><h4>Síguenos</h4><a>Instagram</a><a>LinkedIn</a></div>
+      <div class="f-col"><h4>Síguenos</h4><a href="https://www.instagram.com/camachomaciaarquitectos/" target="_blank" rel="noopener noreferrer">Instagram</a></div>
     </div>
-    <div class="f-bottom"><span>© 2026 cmA Arquitectos</span><span>Madrid · España</span></div>
+    <div class="f-bottom"><span>© 2026 cmA Arquitectos</span><span><a href="/aviso-legal" style="color:inherit;text-decoration:none;">Aviso Legal</a> · <a href="/politica-privacidad" style="color:inherit;text-decoration:none;">Política de Privacidad</a></span></div>
   </footer>
 </div>
 
@@ -345,15 +352,20 @@
   "telephone": "+34910063053",
   "email": "estudio@camacho-macia.com",
   "foundingDate": "1998",
-  "description": "Estudio de arquitectura en Madrid. Obra singular, cultural y residencial desde 1998.",
+  "description": "Estudio de arquitectura en Boadilla del Monte, Madrid. Obra singular, cultural y residencial desde 1998.",
   "address": {
     "@type": "PostalAddress",
     "streetAddress": "Calle Ciruelos 1B",
     "addressLocality": "Boadilla del Monte",
-    "addressRegion": "Madrid",
+    "addressRegion": "Comunidad de Madrid",
     "postalCode": "28668",
     "addressCountry": "ES"
   },
+  "areaServed": [
+    {"@type": "City", "name": "Madrid"},
+    {"@type": "AdministrativeArea", "name": "Comunidad de Madrid"},
+    {"@type": "Country", "name": "España"}
+  ],
   "openingHoursSpecification": [
     {
       "@type": "OpeningHoursSpecification",
@@ -362,7 +374,9 @@
       "closes": "18:00"
     }
   ],
-  "sameAs": []
+  "sameAs": [
+    "https://www.instagram.com/camachomaciaarquitectos/"
+  ]
 }
 </script>
 </body>

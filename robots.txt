@@ -1,3 +1,9 @@
 User-agent: *
 Allow: /
+
+# No existen rutas de administración ni API en esta web.
+# Bloquear rutas internas de Vercel y parámetros de debug:
+Disallow: /_vercel/
+Disallow: /api/
+
 Sitemap: https://camachomaciaarquitectos.com/sitemap.xml
