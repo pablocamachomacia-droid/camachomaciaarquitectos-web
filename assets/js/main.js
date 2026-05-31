@@ -405,7 +405,7 @@ function renderProj(){
 
 function renderProjGrid(){
   const grid=document.getElementById('pjGrid');
-  const items=af==='Todos'?PROJS:PROJS.filter(p=>p.cat===af);
+  const items=(af==='Todos'?PROJS:PROJS.filter(p=>p.cat===af)).slice().sort((a,b)=>parseInt(b.year||0)-parseInt(a.year||0));
   document.getElementById('pjCount').textContent=items.length+' proyecto'+(items.length!==1?'s':'');
 
   grid.innerHTML=items.map((p,i)=>{
