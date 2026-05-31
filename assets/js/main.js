@@ -8,9 +8,9 @@ const PROJ_GALLERY={"0":["/assets/img/proyectos/0/img1.jpg","/assets/img/proyect
 
 const HERO_SLIDES = [
   {
-    "photo": "/assets/img/proyectos/0/hero.jpg",
+    "photo": "/assets/img/proyectos/13/hero.jpg",
     "num": "01",
-    "name": "Pabellón de España"
+    "name": "Centro de Creación de las Artes"
   },
   {
     "photo": "/assets/img/proyectos/2/hero.jpg",
@@ -23,9 +23,9 @@ const HERO_SLIDES = [
     "name": "101 Viviendas VPP"
   },
   {
-    "photo": "/assets/img/proyectos/10/hero.jpg",
+    "photo": "/assets/img/proyectos/24/hero.jpg",
     "num": "04",
-    "name": "Centro Integral de Transporte"
+    "name": "Vivienda en Vitoria-Gasteiz"
   },
   {
     "photo": "/assets/img/proyectos/8/hero.jpg",
