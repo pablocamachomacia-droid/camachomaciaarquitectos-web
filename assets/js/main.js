@@ -405,8 +405,8 @@ function renderProj(){
 
 function renderProjGrid(){
   const grid=document.getElementById('pjGrid');
-  const yr=s=>{const n=parseInt(s||0);return n<100?2000+n:n;};
-  const items=(af==='Todos'?PROJS:PROJS.filter(p=>p.cat===af)).slice().sort((a,b)=>yr(b.year)-yr(a.year));
+  const yr=s=>{const parts=(s||'').split(/[-–]/);const n=parseInt(parts[parts.length-1]||0);return n<100?2000+n:n;};
+  const items=(af==='Todos'?PROJS:PROJS.filter(p=>p.cat===af)).slice().sort((a,b)=>yr(b.data&&b.data.Año||b.year)-yr(a.data&&a.data.Año||a.year));
   document.getElementById('pjCount').textContent=items.length+' proyecto'+(items.length!==1?'s':'');
 
   grid.innerHTML=items.map((p,i)=>{
