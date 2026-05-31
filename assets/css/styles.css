@@ -919,7 +919,7 @@ footer {
   font-size: 20px;
   font-weight: 700;
   letter-spacing: 2px;
-  text-transform: uppercase;
+  text-transform: none;
   margin-bottom: 14px;
 }
 .f-logo em { font-style: normal; }
