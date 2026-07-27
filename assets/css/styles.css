@@ -220,13 +220,8 @@ body {
   opacity: 0;
   transition: opacity 1.8s ease;
   position: absolute; inset: 0;
-  filter: brightness(.72) saturate(.8);
 }
 .hero-img img.on { opacity: 1; }
-.hero-veil {
-  position: absolute; inset: 0;
-  background: linear-gradient(to bottom, rgba(0,0,0,.20) 0%, rgba(0,0,0,.10) 50%, rgba(0,0,0,.60) 100%);
-}
 
 .hero-title {
   position: absolute;
